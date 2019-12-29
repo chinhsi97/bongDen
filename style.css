@@ -1,0 +1,140 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: #9b59b6;
+}
+
+.container{
+	height: 350px;
+	width: 350px;
+	position: absolute;
+	border: 1px solid #fff;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	overflow: hidden;
+}
+
+.lamp{
+	height: 30px;
+	width: 140px;
+	background-color: #333;
+	position: absolute;
+	bottom: 0px;
+	right: 15px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.lamp::before{
+	content: "";
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 8px;
+}
+
+.lamp .stand{
+	background-color: #333;
+	width: 10px;
+	height: 150px;
+	position: absolute;
+	top: -140px;
+	right: 35px;
+	transform: rotate(20deg);
+}
+
+.lamp .stand::before{
+	content: '';
+	background-color: #333;
+	width: 10px;
+	height: 160px;
+	position: absolute;
+	top: -125px;
+	right: 67px;
+	transform: rotate(-60deg);
+}
+
+.lamp .stand::after{
+	content: '';
+	background-color: #e67e22;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -15px;
+	right: -5px;
+	border-radius: 50%;
+}
+
+.bulb{
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	background-color: #f39c12;
+	top: -267px;
+	right: 90px;
+	transform: rotate(225deg);
+	border-radius: 0px 0px 50px 50px;
+}
+
+.bulb::before{
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-color: #f39c12;
+	top: 52px;
+	right: 45px;
+	border-radius: 50%;
+}
+
+.bulb::after{
+	content: '';
+	width: 105px;
+	height: 5px;
+	position: absolute;
+	top: 0px;
+	left: -2.5px;
+	background-color: #f1c40f;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.lamp input[type="checkbox"]{
+	-webkit-appearance: none;
+	height: 22px;
+	width: 18px;
+	background-color: #d35400;
+	position: absolute;
+	top: -10px;
+	left: 8px;
+	border-radius: 5px 5px 0px 0px;
+	outline: none;
+	z-index: -1;
+	outline: none;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+
+.lamp input[type="checkbox"]::before{
+	content: '';
+	position: absolute;
+	height: 0px;
+	width: 65px;
+	border-bottom: 310px solid rgba(255,255,255,0.5);
+	border-left: 45px solid transparent;
+	border-right: 45px solid transparent;
+	transform: rotate(45deg);
+	top: -250px;
+	right: 80px;
+	display: none;
+}
+
+.lamp input[type="checkbox"]:checked{
+	top: -18px;
+}
+
+.lamp input[type="checkbox"]:checked::before{
+	display: block;
+}
